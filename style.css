@@ -172,3 +172,9 @@ td {
     flex-direction: column;
   }
 }
+/* h3を横並び用に調整 */
+.section-with-calendar h3 {
+  margin: 0;
+  white-space: nowrap;   /* 改行させない */
+  border-bottom: none;   /* 下線を消す */
+}
