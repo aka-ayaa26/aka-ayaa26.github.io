@@ -3,7 +3,7 @@
 -------------------- */
 
 :root {
-  --theme-color: #00a0a0;
+  --theme-color: #80d8ff; /* 明るくてかわいい水色 */
 }
 
 * {
@@ -13,12 +13,14 @@
 html, body {
   width: 100%;
   height: 100%;
+  background-color: #e0f7ff; /* 薄い水色背景 */
 }
 
 body {
   margin: 0;
   padding: 30px;
   color: #333;
+  font-family: "Arial", sans-serif;
 }
 
 /* --------------------
@@ -28,6 +30,7 @@ body {
 h1, h2, h3 {
   color: var(--theme-color);
   border-bottom: dashed 0.1em var(--theme-color);
+  padding-bottom: 0.3em;
 }
 
 /* --------------------
@@ -38,6 +41,9 @@ a {
   color: var(--theme-color);
   text-decoration: none;
 }
+a:hover {
+  text-decoration: underline;
+}
 
 /* --------------------
         リスト
@@ -45,10 +51,12 @@ a {
 
 ul {
   list-style: none;
+  padding-left: 0;
 }
 li:before {
   content: "★";
   color: var(--theme-color);
+  margin-right: 0.3em;
 }
 
 /* --------------------
@@ -60,6 +68,7 @@ table {
   border-collapse: collapse;
   border: solid 1px #f0f0f0;
   min-width: 70%;
+  margin-bottom: 20px;
 }
 tr {
   background-color: #fff;
@@ -75,3 +84,4 @@ th, td {
   border: solid 1px #f0f0f0;
   padding: 0.5rem;
 }
+
