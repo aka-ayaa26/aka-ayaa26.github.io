@@ -1,9 +1,12 @@
 /* --------------------
-        全体
+   全体設定
 -------------------- */
 
 :root {
-  --theme-color: #80d8ff; /* 明るくてかわいい水色 */
+  --main-color: #7ecad3;      /* メイン水色 */
+  --sub-color: #eaf8fb;       /* 背景水色 */
+  --accent-color: #4aaab3;    /* 濃いめ水色 */
+  --text-color: #333;
 }
 
 * {
@@ -13,119 +16,159 @@
 html, body {
   width: 100%;
   height: 100%;
-background: linear-gradient(135deg, #e0f7ff 0%, #b3e5fc 100%);
+  background: linear-gradient(180deg, #eaf8fb 0%, #ffffff 100%);
 }
 
 body {
   margin: 0;
-  padding: 30px;
-  color: #333;
-  font-family: "Arial", sans-serif;
+  padding: 32px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: var(--text-color);
 }
 
 /* --------------------
-        見出し
+   見出し
 -------------------- */
 
-h1, h2, h3 {
-  color: var(--theme-color);
-  border-bottom: dashed 0.1em var(--theme-color);
-  padding-bottom: 0.3em;
+h1 {
+  color: var(--accent-color);
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2, h3 {
+  color: var(--accent-color);
+  border-bottom: dashed 2px var(--main-color);
+  padding-bottom: 4px;
 }
 
 /* --------------------
-        リンク
+   リンク
 -------------------- */
 
 a {
-  color: var(--theme-color);
+  color: var(--accent-color);
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
 
 /* --------------------
-        リスト
+   リスト
 -------------------- */
 
 ul {
   list-style: none;
   padding-left: 0;
 }
-li:before {
-  content: "★";
-  color: var(--theme-color);
-  margin-right: 0.3em;
+
+li {
+  margin-bottom: 6px;
+}
+
+li::before {
+  content: "★ ";
+  color: var(--main-color);
 }
 
 /* --------------------
-          表
+   表
 -------------------- */
 
 table {
-  border-spacing: 0;
   border-collapse: collapse;
-  border: solid 1px #f0f0f0;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
   min-width: 70%;
-  margin-bottom: 20px;
 }
-tr {
-  background-color: #fff;
-}
-tr:nth-child(2n) {
-  background-color: #f9f9f9;
-}
+
 th {
-  background: var(--theme-color);
+  background: var(--main-color);
   color: #fff;
+  padding: 10px;
 }
-th, td {
-  border: solid 1px #f0f0f0;
-  padding: 0.5rem;
+
+td {
+  padding: 10px;
+  border-top: 1px solid #eee;
 }
+
+/* --------------------
+   時計
+-------------------- */
+
+#clock {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  background: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* --------------------
+   h3 + カレンダー横並び
+-------------------- */
+
+.section-with-calendar {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
 /* --------------------
    カレンダー
 -------------------- */
 
 #calendar {
-  max-width: 360px;
-  background: #ffffffcc;
+  background: #fff;
+  padding: 15px;
   border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 8px 20px rgba(0, 160, 200, 0.15);
-  margin-top: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 #calendar h4 {
   text-align: center;
-  color: var(--theme-color);
+  color: var(--accent-color);
   margin-bottom: 10px;
-  font-size: 1.2rem;
 }
 
 #calendar table {
-  width: 100%;
-  border-collapse: collapse;
+  min-width: auto;
 }
 
 #calendar th {
-  background: #b3e5fc;
-  color: #0277bd;
+  background: var(--sub-color);
+  color: var(--accent-color);
   font-weight: bold;
-  padding: 6px 0;
-  border-radius: 8px;
 }
 
 #calendar td {
   text-align: center;
-  padding: 8px 0;
+  padding: 8px;
   border-radius: 50%;
 }
 
+/* 今日 */
 #calendar .today {
-  background: var(--theme-color);
+  background: var(--main-color);
   color: #fff;
   font-weight: bold;
 }
 
+/* --------------------
+   スマホ対応
+-------------------- */
+
+@media (max-width: 768px) {
+  .section-with-calendar {
+    flex-direction: column;
+  }
+}
