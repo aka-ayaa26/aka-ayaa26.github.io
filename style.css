@@ -84,4 +84,48 @@ th, td {
   border: solid 1px #f0f0f0;
   padding: 0.5rem;
 }
+/* --------------------
+   カレンダー
+-------------------- */
+
+#calendar {
+  max-width: 360px;
+  background: #ffffffcc;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0, 160, 200, 0.15);
+  margin-top: 20px;
+}
+
+#calendar h4 {
+  text-align: center;
+  color: var(--theme-color);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+#calendar table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#calendar th {
+  background: #b3e5fc;
+  color: #0277bd;
+  font-weight: bold;
+  padding: 6px 0;
+  border-radius: 8px;
+}
+
+#calendar td {
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 50%;
+}
+
+#calendar .today {
+  background: var(--theme-color);
+  color: #fff;
+  font-weight: bold;
+}
 

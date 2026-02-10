@@ -19,3 +19,4 @@
     updateClock();
     // 1秒ごとに更新
     setInterval(updateClock, 1000);
+    <script src="calendar.js" defer></script>
