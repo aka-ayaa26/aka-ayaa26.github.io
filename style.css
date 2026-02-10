@@ -13,7 +13,7 @@
 html, body {
   width: 100%;
   height: 100%;
-  background-color: #e0f7ff; /* 薄い水色背景 */
+background: linear-gradient(135deg, #e0f7ff 0%, #b3e5fc 100%);
 }
 
 body {
