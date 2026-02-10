@@ -172,9 +172,26 @@ td {
     flex-direction: column;
   }
 }
-/* h3を横並び用に調整 */
+/* ===== Open Processing 横並びを強調 ===== */
+
+.section-with-calendar {
+  display: flex;
+  align-items: center;        /* 縦位置をそろえる */
+  gap: 24px;
+}
+
+/* h3を横幅を取らない見出しにする */
 .section-with-calendar h3 {
   margin: 0;
-  white-space: nowrap;   /* 改行させない */
-  border-bottom: none;   /* 下線を消す */
+  padding: 10px 16px;
+  border-bottom: none;        /* 横いっぱいの下線を消す */
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  white-space: nowrap;
+}
+
+.section-with-calendar iframe {
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
